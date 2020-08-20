@@ -29,7 +29,7 @@ export function task8Old() {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export const task8New = () => {
-  var obj = {
+  let obj = {
     nums: [0, 2, 5, 10, 15],
     fives: [],
     calculateNumsFive() {
