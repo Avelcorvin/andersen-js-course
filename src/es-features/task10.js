@@ -26,10 +26,12 @@ B.prototype.getAge = function() {
   return this.age;
 };
 
+//statick
 B.defaultUser = function() {
   return new B('test', 0);
 };
 
+//getters setters
 Object.defineProperty(B.prototype, 'color', {
   get: function() {
     return this._color;
@@ -54,4 +56,44 @@ export function task10Old() {
 // Изменить тело функции task10Old, написав task10New, где заиспользуете
 // класс так, как использовалась функция-конструктор B в task10Old
 
-export function task10New() {}
+export const task10New = () => {
+  const b = new NewB('Max', 12);
+  console.log(b.getName('Best')); // Max Best
+  console.log(b.getAge()); // 12
+  console.log(NewB.defaultUser()); // {name: 'test', age: 0}
+  b.color = 'red';
+  console.log(b.color); // red
+  return b;
+};
+
+export class NewA {
+  constructor(name) {
+    this.name = name;
+  }
+  getName() {
+    return this.name;
+  }
+}
+
+export class NewB extends NewA {
+  constructor(name, age) {
+    super(name);
+    this.age = age;
+  }
+  static defaultUser() {
+    return new this('test', 0);
+  }
+
+  getName(text) {
+    return super.getName() + ' ' + text;
+  }
+  getAge() {
+    return this.age;
+  }
+  get color() {
+    return this._color;
+  }
+  set color(color) {
+    this._color = color;
+  }
+}
