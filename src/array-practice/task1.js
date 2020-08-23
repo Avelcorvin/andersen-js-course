@@ -14,8 +14,4 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
-export const any = (...args) => {
-  const [array, cb] = args;
-  if (!!cb) return array.some(cb);
-  return array.some(v => !v === false);
-};
+export const any = (array, cb = Boolean) => array.some(cb);
