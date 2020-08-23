@@ -40,7 +40,7 @@ import { transformArrayToNumber } from './array-practice/task6';
 import { take } from './array-practice/task7';
 import { without } from './array-practice/task8';
 import { indexOfAll } from './array-practice/task9';
-import {} from './array-practice/task10';
+import { membersOnActiveMeetups, meetups } from './array-practice/task10';
 
 console.log('task1 old', task1Old(10) === 500); // true
 console.log('task1 new', task1New(10) === 500); // true
@@ -175,3 +175,5 @@ console.log('=============');
 console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // -> [0, 3]
 console.log(indexOfAll([1, 2, 3], 4)); // -> []
 console.log('=============');
+
+console.log(membersOnActiveMeetups(meetups)); // 1500
