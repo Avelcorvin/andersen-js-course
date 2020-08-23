@@ -15,3 +15,11 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+export const createGenerator = array => {
+  let index = -1;
+  const next = () => {
+    index++;
+    return index < array.length ? array[index] : 'Complete!';
+  };
+  return { next };
+};
