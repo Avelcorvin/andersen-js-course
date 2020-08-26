@@ -10,4 +10,9 @@
  * Возвращаемым из функции значением будет undefined.
  *
  * forEachRight([1, 2, 3, 4], val => console.log(val)); -> в консоль 4 3 2 1
+ *
  */
+
+export const forEachRight = (array, cb) => {
+  [...array].reverse().forEach(cb);
+};
