@@ -14,5 +14,5 @@
  */
 
 export const forEachRight = (array, cb) => {
-  array.reverse().forEach(cb);
+  [...array].reverse().forEach(cb);
 };
