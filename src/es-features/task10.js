@@ -85,7 +85,7 @@ export class NewB extends NewA {
   }
 
   getName(text) {
-    return super.getName() + ' ' + text;
+    return `${super.getName()} ${text}`;
   }
   getAge() {
     return this.age;
